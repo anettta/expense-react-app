@@ -1,5 +1,5 @@
 import "./App.css";
-import ExpenseList from "./components/ExpenseList";
+import ExpenseList from "./components/Expenses/ExpenseList";
 
 const expenses = [
   {
@@ -23,7 +23,7 @@ const expenses = [
   },
 ];
 
-function App() {
+const App = () => {
   return (
     <div>
       {expenses.map((item) => (
@@ -31,6 +31,6 @@ function App() {
       ))}
     </div>
   );
-}
+};
 
 export default App;
