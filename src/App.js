@@ -1,5 +1,6 @@
 import "./App.css";
 import ExpenseList from "./components/Expenses/ExpenseList";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const expenses = [
   {
@@ -24,8 +25,13 @@ const expenses = [
 ];
 
 const App = () => {
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
   return (
     <div>
+      <NewExpense onAddExpense={addExpenseHandler} />
       {expenses.map((item) => (
         <ExpenseList title={item.title} amount={item.amount} date={item.date} />
       ))}
