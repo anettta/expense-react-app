@@ -32,9 +32,7 @@ const App = () => {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      {expenses.map((item) => (
-        <ExpenseList title={item.title} amount={item.amount} date={item.date} />
-      ))}
+      <ExpenseList items={expenses} />
     </div>
   );
 };
